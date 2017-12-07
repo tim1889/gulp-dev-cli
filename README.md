@@ -3,7 +3,7 @@
 ## 开发运行
 
 * 执行 `npm install` , 下载所需依赖包
-* 可能需要执行 `npm install --save-dev gulp-minify-css gulp-htmlmin`
+* 执行 `npm install gulp -g`
 * 执行 `gulp`, 观察 command log ,打开网址 （一般是 http://loaclhost:800/src['http://loaclhost:800/src']）
 
 
