@@ -1,7 +1,7 @@
 {
-  "name": "UOKO 6th",
-  "version": "1.0.0",
-  "description": "uoko 6周年活动",
+  "name": "gulp_dev",
+  "version": "1.1.0",
+  "description": "gulp dev",
   "dependencies": {
     "express": "3.x"
   },
@@ -12,6 +12,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-connect": "^5.0.0",
     "gulp-imagemin": "^3.4.0",
+    "gulp-less": "^3.3.2",
     "gulp-mini-css": "^0.0.3",
     "gulp-rename": "^1.2.2",
     "gulp-requirejs-optimize": "^0.3.2",

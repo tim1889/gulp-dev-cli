@@ -3,6 +3,7 @@
 var  gulp = require('gulp'),
 concat = require('gulp-concat'),
 minifyCss = require('gulp-minify-css'),
+less = require('gulp-less'),
 uglify = require('gulp-uglify'),
 htmlmin = require('gulp-htmlmin'),
 imagemin = require('gulp-imagemin'),
@@ -18,6 +19,7 @@ input: {
   html: ['src/*.html'],
   js: ['src/js/*.js'],
   css: ['src/css/*css'],
+  less: ['src/css/*less'],  
   img: ['src/img/*']
 },
 output: {
@@ -52,6 +54,16 @@ return gulp.src(config.input.css)
   .pipe(rev.manifest())
   .pipe(gulp.dest('./rev/css'))
   .pipe(connect.reload());
+});
+
+gulp.task('less', function () {
+  return gulp.src(config.input.css)
+      .pipe(less())
+      .pipe(minifyCss())
+      .pipe(rev())     
+      .pipe(gulp.dest(config.output.css))    
+      .pipe(gulp.dest('./rev/css'))
+      .pipe(connect.reload());
 });
 
 gulp.task('img', function () {
